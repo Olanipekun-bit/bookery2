@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookery</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+  
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  
+
+<style>
+
+/* Global Styles */
+/* body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+} */
+
+/* header {
+    background-color: #1c1c1e;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+} */
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+/* 
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a.active {
+    border-bottom: 2px solid #fff;
+} */
+
+main {
+    padding: 20px;
+}
+
+.cart-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cart-list {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.cart-item h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cart-item p {
+    margin: 0;
+    color: #666;
+}
+
+.remove-btn {
+    background-color: #ff4d4f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #ff7875;
+}
+
+.cart-summary {
+    text-align: right;
+}
+
+.cart-summary h3 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+.checkout-btn {
+    background-color: #1c1c1e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #333;
+}
+
+
+</style>
+
+</head>
+<body>
+    <header>
+        
+        <div class="hero_area">
+            <!-- header section strats -->
+            <header class="header_section">
+              <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                  <a class="navbar-brand" href="index.html">
+                    <span>
+                      Bookery
+                    </span>
+                  </a>
+        
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""> </span>
+                  </button>
+        
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                      <li class="nav-item active">
+                        <a class="nav-link pl-lg-0" href="index.html">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about.html"> About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="blog.html"> Blog </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="cart.html"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><circle cx="176" cy="416" r="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="40.5"/><circle cx="400" cy="416" r="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="40.5"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="40.5" d="M48 80h64l48 272h256"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="40.5" d="M160 288h249.44a8 8 0 0 0 7.85-6.43l28.8-144a8 8 0 0 0-7.85-9.57H128"/></svg><sup>3</sup> </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="products.html"> Books </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                      </li>
+                    </ul>
+                    <from class="search_form">
+                      <input type="text" class="form-control" placeholder="Search here...">
+                      <button class="" type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                      </button>
+                    </from>
+                  </div>
+                </nav>
+              </div>
+           
+
+
+    </header>
+
+    <main>
+        <section class="cart-container">
+            <h2>Items in Your Cart</h2>
+            <div class="cart-list">
+                <!-- Items will be dynamically inserted here -->
+                 Book 1 ------
+            </div>
+            <div class="cart-summary">
+                <h3>Total: $<span id="total-price">400,000</span></h3>
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function displayCart() {
+    const cartList = document.querySelector('.cart-list');
+    cartList.innerHTML = '';
+    let total = 0;
+
+    cart.forEach((product, index) => {
+        total += product.price;
+        const productItem = document.createElement('div');
+        productItem.className = 'cart-item';
+        productItem.innerHTML = `
+            <div class="cart-item-details">
+                <img src="images/book-placeholder.png" alt="${product.name}">
+                <div>
+                    <h3>${product.name}</h3>
+                    <p>$${product.price.toFixed(2)}</p>
+                </div>
+            </div>
+            <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+        `;
+        cartList.appendChild(productItem);
+    });
+
+    document.getElementById('total-price').textContent = total.toFixed(2);
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+    displayCart();
+}
+
+function updateCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty.');
+        return;
+    }
+    alert('Thank you for your purchase!');
+    cart = [];
+    updateCart();
+    displayCart();
+}
+
+displayCart();
+
+
+
+    </script>
+</body>
+</html>
